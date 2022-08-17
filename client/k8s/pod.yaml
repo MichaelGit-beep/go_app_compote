@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: compote-client
+  name: compote-client
+spec:
+  containers:
+  - image: docker.bc-artifactory01/k8s-docker/compote_client
+    name: compote-client
+    envFrom:
+    - configMapRef:
+       name: special-config
+       optional: true
