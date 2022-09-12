@@ -2,6 +2,7 @@
 
 ## Run with skaffold:
 1. git clone https://github.com/MichaelGit-beep/go_app_compote.git
+
 2. Change docker images to use to match your image registry in this files:
 - skaffold.yaml
 - server/Dockerfile
