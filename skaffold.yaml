@@ -17,6 +17,7 @@ deploy:
     manifests:
     - client/k8s/configmap.yaml
     - client/k8s/pod.yaml
+    - client/k8s/svc.yaml
     - server/k8s/pod.yaml
     - server/k8s/secret.yaml
     - server/k8s/svc.yaml

@@ -1,10 +1,12 @@
 FROM docker.bc-artifactory01/k8s-docker/golang:alpine3.16 AS builder
+# golang:alpine3.16 AS builder
 WORKDIR /app
 COPY *.go /app
 COPY go.mod /app
 RUN go build -o compote_client .
 
 FROM docker.bc-artifactory01/k8s-docker/alpine:3.16.0
+# alpine:3.16.0
 WORKDIR /app
 COPY --from=builder /app/compote_client /app/
 ENTRYPOINT ["./compote_client"]
