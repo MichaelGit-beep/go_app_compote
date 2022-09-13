@@ -16,7 +16,7 @@ type Compote struct {
 func main() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		log.Println("Getting request...")
+		log.Printf("Getting request from %s\n", r.RemoteAddr)
 		tmp := Compote{}
 		data, err := ioutil.ReadAll(r.Body)
 		if err != nil {

@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: special-config
 data:
-  HTTP_HOST: "compote-server"
+  HTTP_HOST: "localhost"
   HTTP_PORT: "8080"

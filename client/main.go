@@ -45,7 +45,7 @@ func main() {
 		}
 		responce, err := ioutil.ReadAll(req.Body)
 		if string(responce) != "" {
-			log.Println(string(responce))
+			log.Printf("Getting response from %s: %s\n", socket, string(responce))
 		} else {
 			log.Println("Getting empty responce")
 		}
