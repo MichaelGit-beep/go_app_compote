@@ -2,7 +2,6 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: special-config
-  namespace: default
 data:
   HTTP_HOST: "compote-server"
   HTTP_PORT: "8080"
